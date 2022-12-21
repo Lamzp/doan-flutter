@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class CButton extends StatelessWidget {
   final Function()? onTap;
-  const CButton({super.key, required this.onTap});
+  final String textRegister;
+  const CButton({super.key, required this.onTap, required this.textRegister});
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -16,7 +17,7 @@ class CButton extends StatelessWidget {
         ),
         child: Center(
             child: Text(
-          'Đăng nhập',
+          textRegister,
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,

@@ -2,13 +2,16 @@ import 'package:doan_flutter/components/c_button.dart';
 import 'package:doan_flutter/components/c_textfield.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  LoginPage({super.key});
+class RegisterPage extends StatelessWidget {
+  RegisterPage({super.key});
 
   final uNameController = TextEditingController();
   final passController = TextEditingController();
+  final passRepeatController = TextEditingController();
+  final phonesController = TextEditingController();
+  final emailController = TextEditingController();
 
-  void dangNhap() {}
+  void dangKi() {}
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +43,7 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 30),
               // Đăng nhập
               Text(
-                'ĐĂNG NHẬP',
+                'ĐĂNG KÍ',
                 style: TextStyle(
                     color: Colors.grey[700],
                     fontSize: 30,
@@ -52,27 +55,34 @@ class LoginPage extends StatelessWidget {
                   controller: uNameController,
                   hintText: 'Tên tài khoản',
                   obscureText: false),
+              //! Email
+              const SizedBox(height: 15),
+              CTextField(
+                  controller: emailController,
+                  hintText: 'Email',
+                  obscureText: false),
+              //! Số điên thoại
+              const SizedBox(height: 15),
+              CTextField(
+                  controller: phonesController,
+                  hintText: 'Số điện thoại',
+                  obscureText: false),
               //! Mật khẩu
               const SizedBox(height: 15),
               CTextField(
                   controller: passController,
                   hintText: 'Mật khẩu',
+                  obscureText: false),
+              //! Nhập lại mật khẩu
+              const SizedBox(height: 15),
+              CTextField(
+                  controller: passRepeatController,
+                  hintText: 'nhập lại Mật khẩu',
                   obscureText: true),
-              Padding(
-                padding: const EdgeInsets.all(20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      'Chưa có tài khoản đăng kí tại đây!',
-                      style: TextStyle(color: Colors.grey[600]),
-                    ),
-                  ],
-                ),
-              ),
+              const SizedBox(height: 25),
               CButton(
-                onTap: dangNhap,
-                textRegister: 'ĐĂNG NHẬP',
+                onTap: dangKi,
+                textRegister: 'ĐĂNG KÍ',
               )
             ],
           ),
