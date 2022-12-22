@@ -1,3 +1,18 @@
+class User {
+  final String userName;
+  final String passWord;
+
+  const User({
+    required this.userName,
+    required this.passWord,
+  });
+}
+
+final user = [
+  const User(userName: 'Dinhtronglam', passWord: 'zsaqwe'),
+  const User(userName: 'Dinhtronglam77', passWord: 'zsaqwezsaqwe'),
+];
+
 class Question {
   final String text;
   final List<Option> options;

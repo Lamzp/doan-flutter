@@ -131,10 +131,27 @@ class ResultPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
+    return Container(
+      color: Colors.grey[300],
+      width: double.infinity,
+      height: 200,
+      padding: const EdgeInsets.only(top: 50),
+      decoration: const BoxDecoration(
+        shape: BoxShape.circle,
+        image: DecorationImage(
+          image: AssetImage('images/Andy_Dufresne.webp'),
+        ),
+      ),
+      child: Column(
         children: [
-          Text('Ban duoc $score/${questions.length}'),
+          Text('Số điểm bạn đạt được: $score/${questions.length}',
+              style: TextStyle(
+                  color: Colors.cyan,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold)),
+          SizedBox(
+            height: 20,
+          ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.deepPurple[200],

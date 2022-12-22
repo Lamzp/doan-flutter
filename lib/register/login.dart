@@ -1,5 +1,6 @@
 import 'package:doan_flutter/components/c_button.dart';
 import 'package:doan_flutter/components/c_textfield.dart';
+import 'package:doan_flutter/home/homePage.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -70,9 +71,28 @@ class LoginPage extends StatelessWidget {
                   ],
                 ),
               ),
-              CButton(
-                onTap: dangNhap,
-                textRegister: 'ĐĂNG NHẬP',
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePage()));
+                },
+                child: Container(
+                  padding: const EdgeInsets.all(15),
+                  margin: const EdgeInsets.symmetric(horizontal: 35),
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                  child: Center(
+                      child: Text(
+                    'ĐĂNG NHẬP',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    ),
+                  )),
+                ),
               )
             ],
           ),

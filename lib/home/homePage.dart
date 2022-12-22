@@ -1,3 +1,4 @@
+import 'package:doan_flutter/drawend/my_avatar_drawer.dart';
 import 'package:doan_flutter/question/questionPage.dart';
 import 'package:doan_flutter/user/userPage.dart';
 import 'package:flutter/material.dart';
@@ -18,14 +19,14 @@ class HomePage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-              height: 100,
+              height: 80,
               color: Colors.grey[300],
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-              height: 100,
+              height: 80,
               color: Colors.deepPurple[200],
               child: Center(
                 child: ElevatedButton(
@@ -47,7 +48,7 @@ class HomePage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-              height: 100,
+              height: 80,
               color: Colors.deepPurple[200],
               child: Center(
                 child: ElevatedButton(
@@ -55,7 +56,7 @@ class HomePage extends StatelessWidget {
                     backgroundColor: Colors.deepPurple[200],
                     padding: EdgeInsets.all(20.0),
                   ),
-                  child: Text('Trang cá nhân'),
+                  child: Text('Xếp hạng'),
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => UserPage()));
@@ -67,8 +68,23 @@ class HomePage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-              height: 100,
+              height: 80,
               color: Colors.deepPurple[200],
+              child: Center(
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.deepPurple[200],
+                    padding: EdgeInsets.all(20.0),
+                  ),
+                  child: Text('Trang cá nhân'),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => MyAvatarDrawer()));
+                  },
+                ),
+              ),
             ),
           ),
         ],
