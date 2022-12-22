@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'register/login.dart';
 import 'register/register.dart';
 import 'question/questionPage.dart';
+import 'home/homePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: QuestionPage(),
+      home: HomePage(),
     );
   }
 }
